@@ -1,0 +1,47 @@
+{
+    "imperia": [
+        {
+            "id": 1,
+            "title_uz": "Zamonaviy Zebra Pardalar",
+            "title_ru": "Современные шторы Зебра",
+            "tags": ["zebra", "modern"],
+            "images": [
+                { "src": "./assets/images/placeholders/p1.svg", "alt_uz": "Oq zebra parda", "alt_ru": "Белая штора зебра" },
+                { "src": "./assets/images/placeholders/p2.svg", "alt_uz": "Kulrang ofis parda", "alt_ru": "Серая офисная штора" }
+            ]
+        },
+        {
+            "id": 2,
+            "title_uz": "Rimskiy Fasonlar",
+            "title_ru": "Римские Шторы",
+            "tags": ["roman", "classic"],
+            "images": [
+                { "src": "./assets/images/placeholders/p3.svg", "alt_uz": "Yotoqxona uchun rim parda", "alt_ru": "Римская штора для спальни" },
+                { "src": "./assets/images/placeholders/p1.svg", "alt_uz": "Oshxona pardasi", "alt_ru": "Штора для кухни" }
+            ]
+        }
+    ],
+    "homes": [
+        {
+            "id": 101,
+            "title_uz": "Samarqand: Xovli uchun ishlar",
+            "title_ru": "Самарканд: Работы для частного дома",
+            "tags": ["home", "samarkand"],
+            "images": [
+                { "src": "./assets/images/placeholders/p2.svg", "alt_uz": "Mehmonxona ko'rinishi", "alt_ru": "Вид гостиной" }
+            ]
+        }
+    ],
+    "dilnaz": [
+        {
+            "id": 201,
+            "title_uz": "Eksklyuziv Baxmal Parda",
+            "title_ru": "Эксклюзивная Бархатная Штора",
+            "tags": ["sewing", "luxury"],
+            "images": [
+                { "src": "./assets/images/placeholders/p3.svg", "alt_uz": "Qizil baxmal", "alt_ru": "Красный бархат" },
+                { "src": "./assets/images/placeholders/p1.svg", "alt_uz": "Tilla rang bezaklar", "alt_ru": "Золотистые узоры" }
+            ]
+        }
+    ]
+}
