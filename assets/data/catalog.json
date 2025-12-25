@@ -2,13 +2,13 @@
     "imperia": [
         {
             "id": "i1",
-            "title_uz": "Zebra Premium",
-            "title_ru": "Зебра Премиум",
+            "title_uz": "Premium Zebra",
+            "title_ru": "Премиум Зебра",
             "tags": ["jaluzi", "ofis"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI4MDAiIGZpbGw9IiNkNGFmMzciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIEdvbGQ8L3RleHQ+PC9zdmc+",
-                    "alt_uz": "Tilla rang zebra",
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI4MDAiIGZpbGw9IiNkNGFmMzciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIDE8L3RleHQ+PC9zdmc+",
+                    "alt_uz": "Tilla rang ofis zebra",
                     "alt_ru": "Золотая зебра"
                 },
                 {
@@ -37,8 +37,8 @@
     "homes": [
         {
             "id": "h1",
-            "title_uz": "Ibn Sino dagi Ish",
-            "title_ru": "Работа на Ибн Сины",
+            "title_uz": "Ibn Sino ko'chasidagi ish",
+            "title_ru": "Работа на ул. Ибн Сины",
             "tags": ["mijoz", "samarqand"],
             "images": [
                 {
