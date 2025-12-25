@@ -3,37 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperia Shtor & Dilnaz Pardalari | Samarqand - Toshkent</title>
-    <meta name="description" content="Imperia Shtor va Dilnaz Pardalari — Samarqand va Toshkentda eksklyuziv pardalar, jaluzilar, dizayn va tikish xizmatlari. Ibn Sino ko'chasi 23A.">
+    <title>Imperia Shtor & Dilnaz Pardalari | Samarqand</title>
+    <meta name="description" content="Imperia Shtor va Dilnaz Pardalari — Samarqand va Toshkentda eksklyuziv parda dizayni, tikish va o'rnatish xizmatlari. Manzil: Ibn Sino ko'chasi 23A.">
     <meta name="keywords" content="parda, jaluzi, samarqand, toshkent, imperia shtor, dilnaz pardalari, dizayn, tikish, kurslar">
     <meta name="theme-color" content="#d4af37">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags (Telegram va Instagramda chiroyli ko'rinish uchun) -->
     <meta property="og:title" content="Imperia Shtor & Dilnaz Pardalari">
-    <meta property="og:description" content="Premium pardalar va dizayn xizmati. +998 97 921 65 00">
+    <meta property="og:description" content="Premium pardalar, jaluzi va dizayn xizmati. +998 97 921 65 00">
     <meta property="og:type" content="business.business">
     <meta property="og:url" content="https://yandex.ru/maps/org/240707509748">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-    <!-- Yuklanish Ekrani (Preloader) -->
-    <div id="preloader" class="preloader">
-        <div class="loader-content">
-            <div class="spinner"></div>
-            <p>Yuklanmoqda...</p>
-        </div>
-    </div>
-
     <!-- Navigatsiya -->
     <header class="navbar" id="navbar">
         <div class="container nav-inner">
-            <a href="#" class="logo">
+            <div class="logo">
                 <span class="brand-main">IMPERIA</span>
                 <span class="brand-sub">& DILNAZ</span>
-            </a>
+            </div>
 
             <!-- Desktop Menyu -->
             <nav class="desktop-nav">
@@ -46,10 +39,12 @@
 
             <!-- Boshqaruv tugmalari -->
             <div class="nav-controls">
-                <button id="lang-toggle" class="control-btn" aria-label="Language">RU</button>
-                <button id="theme-toggle" class="control-btn" aria-label="Theme">🌙</button>
-                <button id="mobile-menu-toggle" class="control-btn mobile-only" aria-label="Menu">
-                    <span></span><span></span><span></span>
+                <button id="lang-toggle" class="control-btn" aria-label="Change Language">RU</button>
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle Theme">🌙</button>
+                <button id="mobile-menu-toggle" class="control-btn mobile-only" aria-label="Open Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </button>
             </div>
         </div>
@@ -74,10 +69,10 @@
     </div>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section (Bosh ekran) -->
         <section id="hero" class="hero-section">
             <div class="hero-bg"></div>
-            <div class="hero-content container fade-up">
+            <div class="hero-content container fade-on-scroll">
                 <div class="location-tags">
                     <span class="tag">📍 Samarqand</span>
                     <span class="tag outline">📍 Toshkent</span>
@@ -89,7 +84,7 @@
                 </p>
                 <div class="hero-actions">
                     <a href="tel:+998979216500" class="btn btn-primary">
-                        📞 <span data-i18n="btn_call">Qo'ng'iroq qilish</span>
+                        📞 <span data-i18n="btn_call">Qo'ng'iroq: +998 97 921 65 00</span>
                     </a>
                     <a href="#catalog" class="btn btn-glass">
                         📂 <span data-i18n="btn_catalog">Katalogni ko'rish</span>
@@ -98,43 +93,25 @@
             </div>
         </section>
 
-        <!-- Statistika -->
-        <div class="stats-bar">
-            <div class="container stats-grid">
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p data-i18n="stat_exp">Yillik Tajriba</p>
-                </div>
-                <div class="stat-item">
-                    <h3>5000+</h3>
-                    <p data-i18n="stat_clients">Mamnun Mijozlar</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100%</h3>
-                    <p data-i18n="stat_quality">Sifat Kafolati</p>
-                </div>
-            </div>
-        </div>
-
         <!-- Xizmatlar -->
         <section id="services" class="section">
             <div class="container">
-                <div class="section-header fade-up">
+                <div class="section-header fade-on-scroll">
                     <h2 data-i18n="services_title">Bizning Xizmatlar</h2>
                     <div class="separator"></div>
                 </div>
                 <div class="services-grid">
-                    <div class="service-card fade-up">
+                    <div class="service-card fade-on-scroll">
                         <div class="icon">📏</div>
                         <h3 data-i18n="srv_measure">O'lchov va O'rnatish</h3>
                         <p data-i18n="srv_measure_desc">Mutaxassislarimiz bepul o'lchov oladi va tayyor pardalarni o'rnatib beradi.</p>
                     </div>
-                    <div class="service-card fade-up">
+                    <div class="service-card fade-on-scroll">
                         <div class="icon">🪟</div>
                         <h3 data-i18n="srv_jaluzi">Tayyor Jaluzi</h3>
                         <p data-i18n="srv_jaluzi_desc">"Imperia Shtor" — Ofis va uylar uchun keng assortimentdagi zamonaviy jaluzi va pardalar.</p>
                     </div>
-                    <div class="service-card fade-up">
+                    <div class="service-card fade-on-scroll">
                         <div class="icon">✂️</div>
                         <h3 data-i18n="srv_design">Dizayn va Tikish</h3>
                         <p data-i18n="srv_design_desc">"Dilnaz Pardalari" — Har bir mijoz uchun individual dizayn va professional tikuv xizmati.</p>
@@ -146,13 +123,13 @@
         <!-- Katalog -->
         <section id="catalog" class="section bg-alt">
             <div class="container">
-                <div class="section-header fade-up">
+                <div class="section-header fade-on-scroll">
                     <h2 data-i18n="catalog_title">Ishlarimiz Katalogi</h2>
                     <div class="separator"></div>
                 </div>
 
                 <!-- Katalog Boshqaruv -->
-                <div class="catalog-toolbar fade-up">
+                <div class="catalog-toolbar fade-on-scroll">
                     <div class="tabs">
                         <button class="tab-btn active" data-category="imperia">Imperia (Jaluzi)</button>
                         <button class="tab-btn" data-category="dilnaz">Dilnaz (Dizayn)</button>
@@ -164,9 +141,9 @@
                     </div>
                 </div>
 
-                <!-- Galereya (JS orqali to'ldiriladi) -->
+                <!-- Galereya (JS orqali catalog.json dan yuklanadi) -->
                 <div id="gallery-container" class="gallery-grid">
-                    <!-- Rasmlar shu yerga tushadi -->
+                    <div class="loader">Katalog yuklanmoqda...</div>
                 </div>
                 
                 <div id="no-results" class="no-results hidden">
@@ -178,7 +155,7 @@
         <!-- Kurslar -->
         <section id="course" class="section course-section">
             <div class="container">
-                <div class="course-banner fade-up">
+                <div class="course-banner fade-on-scroll">
                     <div class="course-content">
                         <h2 data-i18n="course_title">Parda Tikish va Dizayn Kurslari</h2>
                         <p data-i18n="course_desc">Dilnoza Fayzieva bilan 0 dan professional darajagacha o'rganing. Amaliy darslar, andaza olish va bichish.</p>
@@ -193,12 +170,12 @@
         <!-- Aloqa -->
         <section id="contact" class="section">
             <div class="container">
-                <div class="section-header fade-up">
+                <div class="section-header fade-on-scroll">
                     <h2 data-i18n="contact_title">Bog'lanish</h2>
                     <div class="separator"></div>
                 </div>
 
-                <div class="contact-wrapper fade-up">
+                <div class="contact-wrapper fade-on-scroll">
                     <!-- Telefonlar -->
                     <div class="contact-card">
                         <div class="c-icon">📞</div>
@@ -223,10 +200,10 @@
                         <div class="c-icon">📸</div>
                         <h3>Instagram</h3>
                         <div class="social-links">
-                            <a href="https://www.instagram.com/imperia_shtor_sam?igsh=NGZrY29nYXN1amx4" target="_blank" class="social-btn imperia">
+                            <a href="https://www.instagram.com/imperia_shtor_sam?igsh=NGZrY29nYXN1amx4" target="_blank" class="social-btn imperia-btn">
                                 Imperia Shtor
                             </a>
-                            <a href="https://www.instagram.com/dilnaz_pardalari?igsh=MTluNmwxNzdpeTJ6MA==" target="_blank" class="social-btn dilnaz">
+                            <a href="https://www.instagram.com/dilnaz_pardalari?igsh=MTluNmwxNzdpeTJ6MA==" target="_blank" class="social-btn dilnaz-btn">
                                 Dilnaz Pardalari
                             </a>
                         </div>
@@ -240,13 +217,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Imperia Shtor & Dilnaz Pardalari. All rights reserved.</p>
+                <p>&copy; 2025 Imperia Shtor & Dilnaz Pardalari.</p>
                 <p class="credits">Made by Muhammad Daler</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox (Rasm Modal) -->
+    <!-- Rasm Kattalashtirish (Lightbox) -->
     <div id="lightbox" class="lightbox">
         <div class="lightbox-overlay"></div>
         <div class="lightbox-content">
@@ -254,14 +231,13 @@
             <img src="" alt="" class="lb-img">
             <div class="lb-details">
                 <h3 class="lb-title"></h3>
-                <p class="lb-desc"></p>
             </div>
             <button class="lb-prev">&#10094;</button>
             <button class="lb-next">&#10095;</button>
         </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript Fayl -->
     <script src="./app.js"></script>
 </body>
 </html>
