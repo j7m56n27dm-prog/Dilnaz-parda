@@ -1,50 +1,50 @@
 {
     "imperia": [
         {
-            "id": 1,
-            "title_uz": "Zebra Jaluzilari (Sifatli)",
-            "title_ru": "Жалюзи Зебра (Качественные)",
-            "tags": ["zebra", "ofis", "office"],
+            "id": "i1",
+            "title_uz": "Premium Zebra",
+            "title_ru": "Премиум Зебра",
+            "tags": ["jaluzi", "office", "ofis"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI4MDAiIGZpbGw9IiNjYmExMzUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5aZWJyYSBTYW1wbGUgMTwvdGV4dD48L3N2Zz4=",
-                    "alt_uz": "Oq rangli ofis uchun zebra",
-                    "alt_ru": "Белая зебра для офиса"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiNjYmExMzUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIFN0eWxlPC90ZXh0Pjwvc3ZnPg==",
+                    "alt_uz": "Sariq ofis jaluzisi",
+                    "alt_ru": "Желтые офисные жалюзи"
                 },
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI4MDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5aZWJyYSBTYW1wbGUgMjwvdGV4dD48L3N2Zz4=",
-                    "alt_uz": "Qora rangli premium jaluzi",
-                    "alt_ru": "Черные премиум жалюзи"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkJsYWNrIEVkaXRpb248L3RleHQ+PC9zdmc+",
+                    "alt_uz": "Qora rangli zebra",
+                    "alt_ru": "Черная зебра"
                 }
             ]
         }
     ],
     "dilnaz": [
         {
-            "id": 2,
-            "title_uz": "Eksklyuziv Parda Dizayni",
-            "title_ru": "Эксклюзивный Дизайн Штор",
-            "tags": ["design", "luxury", "home"],
+            "id": "d1",
+            "title_uz": "Klassik Mehmonxona",
+            "title_ru": "Классическая Гостиная",
+            "tags": ["dizayn", "uy", "home"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI4MDAiIGZpbGw9IiM4MDAwMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Dilnaz Design 1PC90ZXh0Pjwvc3ZnPg==",
-                    "alt_uz": "Baxmal parda",
-                    "alt_ru": "Бархатные шторы"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiM4MDAwMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRpbG5heiBEZXNpZ248L3RleHQ+PC9zdmc+",
+                    "alt_uz": "Qizil baxmal parda",
+                    "alt_ru": "Красные бархатные шторы"
                 }
             ]
         }
     ],
     "homes": [
         {
-            "id": 3,
-            "title_uz": "Samarqand: Ibn Sino ko'chasidagi uy",
-            "title_ru": "Самарканд: Дом на улице Ибн Сины",
-            "tags": ["client", "installation"],
+            "id": "h1",
+            "title_uz": "Ibn Sino ko'chasidagi ish",
+            "title_ru": "Работа на ул. Ибн Сины",
+            "tags": ["client", "samarkand"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI4MDAiIGZpbGw9IiM0NDQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5DbGllbnQgV29yazwvdGV4dD48L3N2Zz4=",
-                    "alt_uz": "O'rnatilgan parda",
-                    "alt_ru": "Установленная штора"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiM0NDQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNsaWVudCBXb3JrPC90ZXh0Pjwvc3ZnPg==",
+                    "alt_uz": "O'rnatilgan parda ko'rinishi",
+                    "alt_ru": "Вид установленной шторы"
                 }
             ]
         }
