@@ -1,230 +1,229 @@
-/* === GLOBAL O'ZGARUVCHILAR === */
-const appState = {
+/* =========================================
+   AQLLI DATA TIZIMI (CORS XATOSINI YO'QOTISH)
+   Agar JSON fayl yuklanmasa, mana shu ichki
+   ma'lumotlardan foydalaniladi.
+========================================= */
+const BACKUP_DATA = {
+    imperia: [
+        {
+            title_uz: "Premium Zebra Parda", title_ru: "Премиум Зебра",
+            tags: ["zebra", "ofis"],
+            images: [
+                { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNkNGFmMzciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIFN0eWxlPC90ZXh0Pjwvc3ZnPg==", alt_uz: "Sariq ofis parda", alt_ru: "Желтая штора" },
+                { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkJsYWNrIEVkaXRpb248L3RleHQ+PC9zdmc+", alt_uz: "Qora zebra", alt_ru: "Черная зебра" }
+            ]
+        }
+    ],
+    dilnaz: [
+        {
+            title_uz: "Dizaynerlik Ishi", title_ru: "Дизайнерская Работа",
+            tags: ["dizayn", "uy"],
+            images: [
+                { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM4MDAwMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdilnazIERlc2lnbjwvdGV4dD48L3N2Zz4=", alt_uz: "Baxmal parda", alt_ru: "Бархат" }
+            ]
+        }
+    ],
+    homes: [
+        {
+            title_uz: "Mijoz Uyida", title_ru: "У Клиента",
+            tags: ["mijoz", "samarqand"],
+            images: [
+                { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM1NTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkhvbWUgV29yazwvdGV4dD48L3N2Zz4=", alt_uz: "O'rnatilgan parda", alt_ru: "Установлено" }
+            ]
+        }
+    ]
+};
+
+/* STATE MANAGEMENT */
+const state = {
     lang: localStorage.getItem('lang') || 'uz',
     theme: localStorage.getItem('theme') || 'light',
     data: null,
-    currentImages: [],
-    currentIndex: 0
+    gallery: [],
+    index: 0
 };
 
-/* === TARJIMALAR (DICTIONARY) === */
-const translations = {
+/* TARJIMALAR */
+const i18n = {
     uz: {
         nav_home: "Bosh sahifa", nav_services: "Xizmatlar", nav_catalog: "Katalog", nav_course: "Kurslar", nav_contact: "Aloqa",
         hero_title: "Imperia Shtor va Dilnaz Pardalari", hero_desc: "Uyingiz ko'rkiga ko'rk qo'shuvchi zamonaviy jaluzilar va eksklyuziv parda dizaynlari.",
         btn_call: "Qo'ng'iroq qilish", btn_catalog: "Katalogni ko'rish",
         services_title: "Bizning Xizmatlar",
         srv_measure: "O'lchov va O'rnatish", srv_measure_desc: "Mutaxassislarimiz bepul o'lchov oladi va tayyor pardalarni o'rnatib beradi.",
-        srv_jaluzi: "Tayyor Jaluzi", srv_jaluzi_desc: "\"Imperia Shtor\" do'konida keng assortimentdagi zamonaviy jaluzi va tayyor pardalar.",
+        srv_jaluzi: "Tayyor Jaluzi", srv_jaluzi_desc: "\"Imperia Shtor\" — ofis va uylar uchun keng assortimentdagi zamonaviy jaluzi va pardalar.",
         srv_sewing: "Dizayn va Tikish", srv_sewing_desc: "\"Dilnaz Pardalari\" — har bir mijoz uchun individual dizayn va professional tikuv xizmati.",
-        catalog_title: "Katalog", search_ph: "Qidirish...",
-        course_title: "Parda Tikish va Dizayn Kurslari", course_desc: "Dilnoza Fayzieva bilan 0 dan professional darajagacha o'rganing. Amaliy darslar.", course_btn: "Telegramdan yozish",
+        catalog_title: "Katalog", search_ph: "Qidirish...", no_results: "Hech narsa topilmadi.",
+        course_title: "Parda Tikish va Dizayn Kurslari", course_desc: "Dilnoza Fayzieva bilan 0 dan professional darajagacha o'rganing.", course_btn: "Telegramdan yozish",
         contact_title: "Bog'lanish", address_text: "Samarqand sh., Ibn Sino ko'chasi, 23A", btn_map: "Yandex Kartada ochish"
     },
     ru: {
         nav_home: "Главная", nav_services: "Услуги", nav_catalog: "Каталог", nav_course: "Курсы", nav_contact: "Контакты",
-        hero_title: "Imperia Shtor и Dilnaz Pardalari", hero_desc: "Современные жалюзи и эксклюзивный дизайн штор для уюта вашего дома.",
+        hero_title: "Imperia Shtor и Dilnaz Pardalari", hero_desc: "Современные жалюзи и эксклюзивный дизайн штор. Качество и гарантия.",
         btn_call: "Позвонить", btn_catalog: "Смотреть каталог",
         services_title: "Наши Услуги",
-        srv_measure: "Замер и Установка", srv_measure_desc: "Наши специалисты бесплатно сделают замер и установят готовые шторы.",
-        srv_jaluzi: "Готовые Жалюзи", srv_jaluzi_desc: "Широкий ассортимент современных жалюзи и готовых штор в магазине \"Imperia Shtor\".",
-        srv_sewing: "Дизайн и Пошив", srv_sewing_desc: "\"Dilnaz Pardalari\" — индивидуальный дизайн и профессиональный пошив для каждого клиента.",
-        catalog_title: "Каталог", search_ph: "Поиск...",
-        course_title: "Курсы Дизайна и Шитья", course_desc: "Обучение с нуля до профессионала с Дильнозой Файзиевой. Практические занятия.", course_btn: "Написать в Telegram",
+        srv_measure: "Замер и Установка", srv_measure_desc: "Бесплатный замер и профессиональная установка.",
+        srv_jaluzi: "Готовые Жалюзи", srv_jaluzi_desc: "Широкий ассортимент современных жалюзи и штор в \"Imperia Shtor\".",
+        srv_sewing: "Дизайн и Пошив", srv_sewing_desc: "\"Dilnaz Pardalari\" — индивидуальный дизайн и пошив для каждого клиента.",
+        catalog_title: "Каталог", search_ph: "Поиск...", no_results: "Ничего не найдено.",
+        course_title: "Курсы Дизайна и Шитья", course_desc: "Обучение с нуля до профессионала с Дильнозой Файзиевой.", course_btn: "Написать в Telegram",
         contact_title: "Контакты", address_text: "г. Самарканд, ул. Ибн Сины, 23А", btn_map: "Открыть в Яндекс Картах"
     }
 };
 
-/* === SAYT YUKLANGANDA === */
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mavzuni va Tilni sozlash
-    applyTheme();
-    applyLanguage();
+/* DOM ELEMENTLARI */
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => document.querySelectorAll(sel);
 
-    // 2. Hodisalarni ulash (Events)
-    setupEventListeners();
+/* INIT */
+document.addEventListener('DOMContentLoaded', async () => {
+    initTheme();
+    initLang();
+    setupEvents();
+    
+    // Gibrid Ma'lumot Yuklash (Smart Load)
+    try {
+        const res = await fetch('./assets/data/catalog.json');
+        if(!res.ok) throw new Error("JSON Fetch Failed");
+        state.data = await res.json();
+    } catch (e) {
+        console.warn("JSON yuklanmadi, zaxira ma'lumot ishlatilmoqda:", e);
+        state.data = BACKUP_DATA;
+    }
+    
+    // Preloaderni o'chirish
+    setTimeout(() => {
+        $('#preloader').style.opacity = '0';
+        setTimeout(() => $('#preloader').remove(), 500);
+    }, 500);
 
-    // 3. Ma'lumotni yuklash (Fetch JSON)
-    fetchCatalogData();
+    renderGallery('imperia');
+    setupObserver();
 });
 
-/* === FUNKSIYALAR === */
+/* FUNKSIYALAR */
+function setupEvents() {
+    // Theme
+    $('#theme-btn').addEventListener('click', () => {
+        state.theme = state.theme === 'light' ? 'dark' : 'light';
+        localStorage.setItem('theme', state.theme);
+        initTheme();
+    });
 
-// 1. Ma'lumotni olish
-async function fetchCatalogData() {
-    try {
-        const response = await fetch('./assets/data/catalog.json');
-        
-        // Agar javob xato bo'lsa
-        if (!response.ok) throw new Error(`HTTP Xato: ${response.status}`);
-        
-        appState.data = await response.json();
-        
-        // Preloaderni o'chirish
-        document.getElementById('preloader').style.display = 'none';
-        
-        // Katalogni chizish (Default: imperia)
-        renderGallery('imperia');
+    // Lang
+    $('#lang-btn').addEventListener('click', () => {
+        state.lang = state.lang === 'uz' ? 'ru' : 'uz';
+        localStorage.setItem('lang', state.lang);
+        initLang();
+        const activeCat = $('.tab-btn.active').dataset.category;
+        renderGallery(activeCat, $('#search-input').value);
+    });
 
-    } catch (error) {
-        console.error("Katalogni yuklashda xatolik:", error);
-        
-        // Ekranga xato haqida xabar chiqarish (Foydalanuvchi tushunishi uchun)
-        document.getElementById('preloader').innerHTML = `
-            <div style="text-align:center; padding:20px; color:red;">
-                <h3>Ma'lumot yuklanmadi!</h3>
-                <p>Agar bu faylni to'g'ridan-to'g'ri ochgan bo'lsangiz, brauzer JSON faylni o'qiy olmaydi (CORS).</p>
-                <p>Iltimos, VS Code "Live Server" ishlating yoki GitHub Pages'ga yuklang.</p>
-            </div>
-        `;
-    }
+    // Mobil Menu
+    const menu = $('#mobile-menu');
+    const toggleMenu = (show) => {
+        if(show) menu.classList.add('active');
+        else menu.classList.remove('active');
+    };
+    $('#mobile-menu-btn').addEventListener('click', () => toggleMenu(true));
+    $('#close-menu').addEventListener('click', () => toggleMenu(false));
+    $$('.m-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+
+    // Tabs
+    $$('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            $$('.tab-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            renderGallery(e.target.dataset.category);
+        });
+    });
+
+    // Search
+    $('#search-input').addEventListener('input', (e) => {
+        const activeCat = $('.tab-btn.active').dataset.category;
+        renderGallery(activeCat, e.target.value);
+    });
+
+    // Lightbox
+    $('.lb-close').addEventListener('click', closeLightbox);
+    $('.lightbox-overlay').addEventListener('click', closeLightbox);
+    $('.lb-next').addEventListener('click', () => changeSlide(1));
+    $('.lb-prev').addEventListener('click', () => changeSlide(-1));
 }
 
-// 2. Galereyani chizish
-function renderGallery(category, searchTerm = "") {
-    const container = document.getElementById('gallery-container');
-    const noDataMsg = document.getElementById('no-data-message');
-    container.innerHTML = ""; // Tozalash
-    appState.currentImages = []; // Rasmlar ro'yxatini yangilash
+function initTheme() {
+    document.documentElement.setAttribute('data-theme', state.theme);
+    $('#theme-btn').textContent = state.theme === 'light' ? '🌙' : '☀️';
+}
 
-    if (!appState.data || !appState.data[category]) return;
+function initLang() {
+    $('#lang-btn').textContent = state.lang.toUpperCase();
+    const t = i18n[state.lang];
+    $$('[data-lang]').forEach(el => el.textContent = t[el.dataset.lang]);
+    $$('[data-lang-ph]').forEach(el => el.placeholder = t[el.dataset.langPh]);
+}
 
-    // Tanlangan kategoriyadagi barcha albomlarni yig'ish
-    appState.data[category].forEach(album => {
-        const title = appState.lang === 'uz' ? album.title_uz : album.title_ru;
-        
+function renderGallery(cat, search = "") {
+    const grid = $('#gallery-grid');
+    grid.innerHTML = "";
+    state.gallery = [];
+    
+    const albums = state.data[cat] || [];
+    
+    albums.forEach(album => {
+        const title = state.lang === 'uz' ? album.title_uz : album.title_ru;
         album.images.forEach(img => {
-            const alt = appState.lang === 'uz' ? img.alt_uz : img.alt_ru;
+            const alt = state.lang === 'uz' ? img.alt_uz : img.alt_ru;
+            const fullStr = (title + " " + alt + " " + (album.tags || []).join(" ")).toLowerCase();
             
-            // Qidiruv (Search) logikasi
-            const fullText = (title + " " + alt + " " + album.tags.join(" ")).toLowerCase();
-            if (fullText.includes(searchTerm.toLowerCase())) {
+            if(fullStr.includes(search.toLowerCase())) {
+                state.gallery.push({ src: img.src, title: title, desc: alt });
                 
-                // Rasm obyekti
-                const imageObj = { src: img.src, title: title, desc: alt };
-                appState.currentImages.push(imageObj);
-                
-                // HTML element yaratish
-                const index = appState.currentImages.length - 1;
                 const div = document.createElement('div');
-                div.className = "gallery-item";
+                div.className = 'gallery-item fade-up visible';
                 div.innerHTML = `
                     <img src="${img.src}" alt="${alt}" loading="lazy">
-                    <div class="gallery-overlay">
+                    <div class="item-overlay">
                         <h4>${title}</h4>
                     </div>
                 `;
-                div.onclick = () => openLightbox(index);
-                container.appendChild(div);
+                div.onclick = () => openLightbox(state.gallery.length - 1);
+                grid.appendChild(div);
             }
         });
     });
 
-    // Agar rasm topilmasa
-    if (appState.currentImages.length === 0) {
-        noDataMsg.style.display = "block";
-    } else {
-        noDataMsg.style.display = "none";
-    }
+    if(state.gallery.length === 0) $('#no-results').classList.remove('hidden');
+    else $('#no-results').classList.add('hidden');
 }
 
-// 3. Lightbox (Rasm kattalashtirish)
-function openLightbox(index) {
-    appState.currentIndex = index;
+function openLightbox(idx) {
+    state.index = idx;
     updateLightbox();
-    document.getElementById('lightbox-modal').style.display = "block";
+    $('#lightbox').classList.add('active');
 }
 
 function closeLightbox() {
-    document.getElementById('lightbox-modal').style.display = "none";
+    $('#lightbox').classList.remove('active');
 }
 
 function updateLightbox() {
-    const img = appState.currentImages[appState.currentIndex];
-    const lightboxImg = document.getElementById('lightbox-img');
-    const caption = document.getElementById('lightbox-caption');
-    
-    lightboxImg.src = img.src;
-    caption.innerText = `${img.title} - ${img.desc}`;
+    const item = state.gallery[state.index];
+    $('.lb-img').src = item.src;
+    $('.lb-caption').textContent = `${item.title} - ${item.desc}`;
 }
 
-function changeSlide(n) {
-    const len = appState.currentImages.length;
-    appState.currentIndex = (appState.currentIndex + n + len) % len;
+function changeSlide(d) {
+    const len = state.gallery.length;
+    state.index = (state.index + d + len) % len;
     updateLightbox();
 }
 
-// 4. Sozlamalar va Hodisalar
-function setupEventListeners() {
-    // Tilni o'zgartirish
-    document.getElementById('lang-switch').addEventListener('click', () => {
-        appState.lang = appState.lang === 'uz' ? 'ru' : 'uz';
-        localStorage.setItem('lang', appState.lang);
-        applyLanguage();
-        // Katalogni qayta yuklash (tarjimalar o'zgarishi uchun)
-        const activeCat = document.querySelector('.filter-btn.active').getAttribute('data-category');
-        renderGallery(activeCat, document.getElementById('search-input').value);
-    });
-
-    // Mavzuni o'zgartirish (Dark/Light)
-    document.getElementById('theme-switch').addEventListener('click', () => {
-        appState.theme = appState.theme === 'light' ? 'dark' : 'light';
-        localStorage.setItem('theme', appState.theme);
-        applyTheme();
-    });
-
-    // Mobil menyu
-    const mobileMenu = document.getElementById('mobile-menu-overlay');
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-        mobileMenu.style.display = 'flex';
-    });
-    document.getElementById('close-menu-btn').addEventListener('click', () => {
-        mobileMenu.style.display = 'none';
-    });
-    // Link bosilganda yopish
-    document.querySelectorAll('.m-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.style.display = 'none';
+function setupObserver() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add('visible');
         });
-    });
-
-    // Filtr tugmalari
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            e.target.classList.add('active');
-            renderGallery(e.target.getAttribute('data-category'));
-        });
-    });
-
-    // Qidiruv
-    document.getElementById('search-input').addEventListener('input', (e) => {
-        const activeCat = document.querySelector('.filter-btn.active').getAttribute('data-category');
-        renderGallery(activeCat, e.target.value);
-    });
-
-    // Lightbox yopish
-    document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
-}
-
-// 5. Yordamchi funksiyalar
-function applyTheme() {
-    document.documentElement.setAttribute('data-theme', appState.theme);
-    document.getElementById('theme-switch').innerText = appState.theme === 'light' ? '🌙' : '☀️';
-}
-
-function applyLanguage() {
-    document.getElementById('lang-switch').innerText = appState.lang.toUpperCase();
-    const texts = translations[appState.lang];
-    
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        const key = el.getAttribute('data-lang');
-        if (texts[key]) el.innerText = texts[key];
-    });
-
-    document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-lang-placeholder');
-        if (texts[key]) el.placeholder = texts[key];
-    });
+    }, {threshold: 0.1});
+    $$('.fade-up').forEach(el => obs.observe(el));
 }
