@@ -1,6 +1,6 @@
-/* --- GLOBAL O'ZGARUVCHILAR --- */
+/* --- O'ZGARUVCHILAR (Ranglar) --- */
 :root {
-    --primary: #d4af37;        /* Tilla rang */
+    --primary: #d4af37;        /* Tilla rang (Gold) */
     --primary-dark: #b08d2b;
     --bg-body: #ffffff;
     --bg-alt: #f8f9fa;
@@ -29,13 +29,12 @@ body {
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
 }
-
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; border: none; font-family: inherit; }
 
-/* --- YORDAMCHI KLASSLAR --- */
+/* --- YORDAMCHI STYLELAR --- */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .section { padding: 80px 0; }
 .bg-alt { background-color: var(--bg-alt); }
@@ -59,8 +58,6 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .desktop-nav { display: none; gap: 25px; }
 .nav-link { font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; }
 .nav-link:hover { color: var(--primary); }
-.nav-link::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); }
-.nav-link:hover::after { width: 100%; }
 
 .nav-controls { display: flex; gap: 10px; align-items: center; }
 .control-btn {
@@ -73,7 +70,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .control-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
 
 .mobile-only { display: flex; flex-direction: column; gap: 4px; border: none; }
-.mobile-only span { width: 18px; height: 2px; background: var(--text-main); }
+.bar { width: 18px; height: 2px; background: var(--text-main); }
 
 @media(min-width: 900px) {
     .desktop-nav { display: flex; }
@@ -147,7 +144,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); opacity: 0.5; }
 
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; min-height: 200px; }
 .gallery-item {
     position: relative; aspect-ratio: 1; border-radius: var(--border-radius); overflow: hidden;
     cursor: pointer; background: #ddd;
@@ -161,6 +158,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 .gallery-item:hover .item-overlay { transform: translateY(0); }
 .item-overlay h4 { color: #fff; font-size: 1.1rem; }
+.loader { text-align: center; width: 100%; grid-column: 1/-1; padding: 20px; color: var(--text-muted); }
 
 /* --- COURSE --- */
 .course-section { padding: 60px 0; }
@@ -190,8 +188,8 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .c-link:hover, .map-btn:hover { color: var(--primary); }
 .social-links { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
 .social-btn { padding: 10px; border-radius: 8px; color: #fff; font-weight: 600; }
-.imperia { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-.dilnaz { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c); }
+.imperia-btn { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.dilnaz-btn { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c); }
 
 /* --- FOOTER --- */
 .footer { background: #111; color: #fff; padding: 40px 0; text-align: center; margin-top: 60px; }
@@ -217,17 +215,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .lb-prev { left: -60px; } .lb-next { right: -60px; }
 @media(max-width: 768px) { .lb-prev { left: -10px; } .lb-next { right: -10px; } .lb-close { top: -40px; right: 10px; } }
 
-/* --- PRELOADER & MOBILE MENU --- */
-.preloader {
-    position: fixed; inset: 0; background: var(--bg-body); z-index: 9999;
-    display: flex; align-items: center; justify-content: center; transition: opacity 0.5s;
-}
-.spinner {
-    width: 50px; height: 50px; border: 4px solid var(--bg-alt); border-top-color: var(--primary);
-    border-radius: 50%; animation: spin 1s infinite linear; margin: 0 auto 15px;
-}
-@keyframes spin { 100% { transform: rotate(360deg); } }
-
+/* --- MOBILE MENU & ANIMATION --- */
 .mobile-menu-overlay {
     position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2000;
     opacity: 0; pointer-events: none; transition: 0.3s;
@@ -245,6 +233,5 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .mobile-socials { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
 .mobile-socials a { color: var(--primary); font-weight: bold; }
 
-/* Animation Utils */
-.fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
-.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-on-scroll { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
+.fade-on-scroll.visible { opacity: 1; transform: translateY(0); }
