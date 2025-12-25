@@ -2,19 +2,19 @@
     "imperia": [
         {
             "id": "i1",
-            "title_uz": "Premium Zebra",
-            "title_ru": "Премиум Зебра",
-            "tags": ["jaluzi", "office", "ofis"],
+            "title_uz": "Zebra Pardalar",
+            "title_ru": "Жалюзи Зебра",
+            "tags": ["zebra", "ofis"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiNjYmExMzUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIFN0eWxlPC90ZXh0Pjwvc3ZnPg==",
-                    "alt_uz": "Sariq ofis jaluzisi",
-                    "alt_ru": "Желтые офисные жалюзи"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNkNGFmMzciLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIDE8L3RleHQ+PC9zdmc+",
+                    "alt_uz": "Sariq ofis zebra parda",
+                    "alt_ru": "Желтая зебра для офиса"
                 },
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkJsYWNrIEVkaXRpb248L3RleHQ+PC9zdmc+",
-                    "alt_uz": "Qora rangli zebra",
-                    "alt_ru": "Черная зебра"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlplYnJhIDI8L3RleHQ+PC9zdmc+",
+                    "alt_uz": "Qora dizayn zebra",
+                    "alt_ru": "Черная дизайн зебра"
                 }
             ]
         }
@@ -22,12 +22,12 @@
     "dilnaz": [
         {
             "id": "d1",
-            "title_uz": "Klassik Mehmonxona",
-            "title_ru": "Классическая Гостиная",
-            "tags": ["dizayn", "uy", "home"],
+            "title_uz": "Klassik Pardalar",
+            "title_ru": "Классические Шторы",
+            "tags": ["klassika", "uy"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiM4MDAwMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRpbG5heiBEZXNpZ248L3RleHQ+PC9zdmc+",
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM4MDAwMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdilnaz DesignPC90ZXh0Pjwvc3ZnPg==",
                     "alt_uz": "Qizil baxmal parda",
                     "alt_ru": "Красные бархатные шторы"
                 }
@@ -37,14 +37,14 @@
     "homes": [
         {
             "id": "h1",
-            "title_uz": "Ibn Sino ko'chasidagi ish",
-            "title_ru": "Работа на ул. Ибн Сины",
-            "tags": ["client", "samarkand"],
+            "title_uz": "Mijoz uyidagi ish",
+            "title_ru": "Работа у клиента",
+            "tags": ["mijoz", "samarqand"],
             "images": [
                 {
-                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiB2aWV3Qm94PSIwIDAgNjAwIDYwMCI+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiM0NDQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNsaWVudCBXb3JrPC90ZXh0Pjwvc3ZnPg==",
-                    "alt_uz": "O'rnatilgan parda ko'rinishi",
-                    "alt_ru": "Вид установленной шторы"
+                    "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM1NTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkhvbWUgV29yazwvdGV4dD48L3N2Zz4=",
+                    "alt_uz": "Mehmonxona ko'rinishi",
+                    "alt_ru": "Вид гостиной"
                 }
             ]
         }
